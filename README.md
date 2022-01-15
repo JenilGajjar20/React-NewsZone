@@ -1,70 +1,68 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# NewsZone
+**NewsZone** application can be used to grab different 
+news quickly and efficiently. 
+If you are interested in various news updates such as 
+weather report, sports reviews, politics and 
+entertainment then this application is for you.
 
-## Available Scripts
+This website is created using **React Class Based Component**. 
+The code will also let you learn about the structure of 
+**Class Based Components** in **React**.
 
-In the project directory, you can run:
+## What are components in React?
+- Components are like functions that return the HTML elements.
+- Components are independent and reusable bits of code. 
+- They serve the same purpose as the JavaScript functions, but work in isolation and return HTML via a **render()** function.
 
-### `npm start`
+## Class Based Components
+React ***class based components*** are the _bread_ and _butter_ of 
+most modern web apps built in **ReactJS**. These components 
+are simple classes that are made up of multiple functions 
+that add functionality to the application. All the class
+based components are child classes for the Component class 
+of **ReactJS**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+When creating a React component, the component's name must start with an upper case letter.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The component has to include the **extends React.Component** statement, this statement creates an inheritance to React.Component and gives your component access to React.Component's functions.
 
-### `npm test`
+The component also requires a **render()** method, this method returns HTML.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Example: 
+```
+Class Car extends React.Component{
+    render(){
+        return <h2>I am a Class Component</h2>
+    }
+}
+```
 
-### `npm run build`
+## Component Contructor
+If there is a **constructor()** function in your component, this function will be called when the components get initiated.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The constructor function is where you initiate the component's properties.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In React, component properties should be kept in an object **state**.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The constructor function is also where you honor the inheritance of the parent component by including the **super()** statement.
 
-### `npm run eject`
+The **super()** statement executes the parent component's constructor function and your component has access to all the functions of the parent component(React.Component).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Example: 
+```
+Class Car extends React.Component{
+    constructor(){
+        super();
+        this.state = {
+            color: 'red'
+        };
+    }
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    render(){
+        return <h2>I am a {this.state.color} Car!</h2>
+    }
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Output: I am a red Car!
+```

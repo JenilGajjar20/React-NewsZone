@@ -66,3 +66,11 @@ Class Car extends React.Component{
 
 Output: I am a red Car!
 ```
+
+**News API** is a simple, easy-to-use REST API that 
+returns JSON search results for current and 
+historic news articles published by over 80,000 
+worldwide sources.
+
+Generate your own API KEY from [newsapi](https://newsapi.org/) and use it in the program.
+
